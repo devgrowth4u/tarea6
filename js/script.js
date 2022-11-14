@@ -2,8 +2,7 @@
 //Contastante que toma datos y envia a index
 
 const pokemonContenedor = document.querySelector(".pokemon");
-let limit = 19;
-let offset = 1;
+
 
 //Función con fetch para api
 
@@ -22,13 +21,15 @@ function fetchPokemon(id) {
     }
 }
 
-// Función reccorre con for ocupando limit
 
-function fetchpersonajes(offset, limit) {
-  for (let i = 1; i <= offset + limit; i++) {
-    fetchPokemon(i);
+// Función reccorre con for ocupando limit
+function personaje(){
+  fetchpersonajes = []
+  for (let i = 1; i <= 20; i++) {
+      fetchPokemon(i);
   }
 }
+
 
 
 function crearPokemon(pokemon) {
@@ -74,9 +75,6 @@ imgcontenedor.appendChild(imegen);
   pokemonContenedor.appendChild(carta);
 }
 
-
-fetchpersonajes(offset, limit);
-
-
+personaje();
 
 
